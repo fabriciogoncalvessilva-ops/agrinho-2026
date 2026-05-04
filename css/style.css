@@ -1,0 +1,733 @@
+/* ETAPA A1 - Complexidade - NÃ­vel 1: CSS simples com cores, fundo e fonte */
+/* ETAPA B1 - Usabilidade - NÃ­vel 1: contraste adequado e textos visÃ­veis */
+/* ETAPA 1 - USABILIDADE - NÃVEL 1 */
+:root {
+    --verde-escuro: #123f2a;
+    --verde-medio: #2d7d46;
+    --verde-claro: #8bcf74;
+    --azul: #2a7fb8;
+    --azul-claro: #d9eef8;
+    --terra: #b77d3b;
+    --bege: #f4ead7;
+    --branco: #ffffff;
+    --cinza-texto: #243029;
+    --cinza-suave: #eef3ec;
+    --sombra: 0 18px 45px rgba(18, 63, 42, 0.14);
+    --raio: 8px;
+    --transicao: 180ms ease;
+    --fonte-base: "Segoe UI", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fonte-base);
+    color: var(--cinza-texto);
+    background: var(--branco);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+/* ETAPA B2 - Usabilidade - NÃ­vel 2: espaÃ§amentos, alinhamento e largura consistente */
+/* ETAPA 2 - USABILIDADE - NÃVEL 2 */
+.container {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.skip-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 50;
+    transform: translateY(-150%);
+    padding: 10px 14px;
+    border-radius: var(--raio);
+    background: var(--verde-escuro);
+    color: var(--branco);
+    text-decoration: none;
+    transition: transform var(--transicao);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid rgba(18, 63, 42, 0.12);
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+}
+
+.cabecalho__conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 78px;
+    gap: 20px;
+}
+
+.cabecalho__marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cabecalho__icone {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--verde-escuro), var(--azul));
+    color: var(--branco);
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    color: var(--verde-escuro);
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.cabecalho p {
+    margin: 2px 0 0;
+    font-size: 0.86rem;
+    color: #52645a;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu a {
+    padding: 10px 12px;
+    border-radius: var(--raio);
+    color: var(--verde-escuro);
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: background var(--transicao), color var(--transicao);
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    background: var(--cinza-suave);
+    color: var(--verde-medio);
+}
+
+.botao-menu {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: var(--raio);
+    background: var(--verde-escuro);
+    cursor: pointer;
+}
+
+.botao-menu span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px auto;
+    background: var(--branco);
+}
+
+/* ETAPA D2 - Originalidade - NÃ­vel 2: paleta agro, terra, tecnologia e natureza */
+.banner {
+    min-height: calc(100vh - 78px);
+    display: flex;
+    align-items: center;
+    padding: 56px 0;
+    background:
+        linear-gradient(120deg, rgba(18, 63, 42, 0.9), rgba(42, 127, 184, 0.76)),
+        linear-gradient(180deg, #eaf6e2, #f7fbf5);
+    color: var(--branco);
+}
+
+.banner__grade {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+    align-items: center;
+    gap: 44px;
+}
+
+.etiqueta {
+    margin: 0 0 12px;
+    color: var(--terra);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+}
+
+.banner .etiqueta {
+    color: #d6f7a6;
+}
+
+.banner h2 {
+    max-width: 720px;
+    margin: 0;
+    font-size: clamp(2.3rem, 6vw, 4.9rem);
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.banner p {
+    max-width: 650px;
+    margin: 20px 0 0;
+    font-size: 1.12rem;
+}
+
+.banner__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.banner__imagem {
+    margin: 0;
+}
+
+.banner__imagem img {
+    border: 5px solid rgba(255, 255, 255, 0.46);
+    border-radius: var(--raio);
+    background: var(--branco);
+    box-shadow: var(--sombra);
+}
+
+.banner__imagem figcaption {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 0.9rem;
+}
+
+.secao {
+    padding: 84px 0;
+}
+
+.secao--clara {
+    background: #f7faf4;
+}
+
+.secao--interativa {
+    background:
+        linear-gradient(135deg, rgba(139, 207, 116, 0.2), rgba(42, 127, 184, 0.16)),
+        var(--branco);
+}
+
+.grade-dupla,
+.grade-simulador {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
+    gap: 36px;
+    align-items: start;
+}
+
+.secao h2 {
+    margin: 0 0 18px;
+    color: var(--verde-escuro);
+    font-size: clamp(1.85rem, 3vw, 2.7rem);
+    line-height: 1.12;
+}
+
+.secao h3 {
+    margin: 0 0 10px;
+    color: var(--verde-escuro);
+}
+
+.secao p {
+    margin: 0 0 14px;
+}
+
+.cabecalho-secao {
+    max-width: 760px;
+    margin-bottom: 32px;
+}
+
+.painel-destaque,
+.painel-participacao,
+.resultado {
+    padding: 28px;
+    border: 1px solid rgba(18, 63, 42, 0.12);
+    border-radius: var(--raio);
+    background: var(--branco);
+    box-shadow: var(--sombra);
+}
+
+.lista-check,
+.lista-acoes,
+.mural-ideias {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.lista-check li,
+.lista-acoes li,
+.mural-ideias li {
+    position: relative;
+    padding: 10px 0 10px 28px;
+    border-bottom: 1px solid rgba(18, 63, 42, 0.08);
+}
+
+.lista-check li::before,
+.lista-acoes li::before,
+.mural-ideias li::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--verde-claro);
+}
+
+/* ETAPA B3 - Usabilidade - NÃ­vel 3: cards, botÃµes e feedback visual */
+/* ETAPA 3 - USABILIDADE - NÃVEL 3 */
+.cards {
+    display: grid;
+    gap: 18px;
+}
+
+.cards--quatro {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cards--tres {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+    min-height: 210px;
+    padding: 24px;
+    border: 1px solid rgba(18, 63, 42, 0.12);
+    border-radius: var(--raio);
+    background: var(--branco);
+    box-shadow: 0 12px 28px rgba(18, 63, 42, 0.08);
+    transition: transform var(--transicao), box-shadow var(--transicao), border-color var(--transicao);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(45, 125, 70, 0.34);
+    box-shadow: var(--sombra);
+}
+
+.card__icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: var(--azul-claro);
+    color: var(--azul);
+    font-weight: 800;
+}
+
+.card--solucao {
+    border-top: 5px solid var(--verde-medio);
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 18px;
+    border: 2px solid transparent;
+    border-radius: var(--raio);
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform var(--transicao), background var(--transicao), border-color var(--transicao), color var(--transicao);
+}
+
+.botao:hover,
+.botao:focus-visible {
+    transform: translateY(-2px);
+}
+
+.botao--primario {
+    background: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.botao--primario:hover,
+.botao--primario:focus-visible {
+    background: var(--verde-medio);
+}
+
+.botao--secundario {
+    border-color: rgba(255, 255, 255, 0.62);
+    background: rgba(255, 255, 255, 0.16);
+    color: var(--branco);
+}
+
+.painel-participacao .botao--secundario {
+    border-color: var(--verde-medio);
+    background: var(--branco);
+    color: var(--verde-escuro);
+}
+
+.botao--neutro {
+    border-color: rgba(18, 63, 42, 0.22);
+    background: var(--branco);
+    color: var(--verde-escuro);
+}
+
+.formulario-simulador,
+.formulario-ideia {
+    margin-top: 24px;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+legend {
+    margin-bottom: 12px;
+    color: var(--verde-escuro);
+    font-weight: 800;
+}
+
+.opcao-sustentavel {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+    padding: 14px;
+    border: 1px solid rgba(18, 63, 42, 0.12);
+    border-radius: var(--raio);
+    background: var(--branco);
+    cursor: pointer;
+    transition: border-color var(--transicao), background var(--transicao);
+}
+
+.opcao-sustentavel:hover,
+.opcao-sustentavel:has(input:checked) {
+    border-color: var(--verde-medio);
+    background: #f1f8ee;
+}
+
+.opcao-sustentavel input {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    accent-color: var(--verde-medio);
+}
+
+.campo-formulario {
+    margin-top: 18px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--verde-escuro);
+    font-weight: 800;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    border: 1px solid rgba(18, 63, 42, 0.22);
+    border-radius: var(--raio);
+    background: var(--branco);
+    color: var(--cinza-texto);
+}
+
+.campo-formulario textarea {
+    resize: vertical;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    outline: 3px solid rgba(139, 207, 116, 0.38);
+    border-color: var(--verde-medio);
+}
+
+.acoes-formulario,
+.preferencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.resultado {
+    position: sticky;
+    top: 104px;
+    background: linear-gradient(180deg, var(--branco), #f3faf0);
+}
+
+.resultado__rotulo {
+    display: block;
+    color: var(--terra);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+}
+
+.resultado strong {
+    display: block;
+    margin: 10px 0;
+    color: var(--verde-escuro);
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.barra {
+    height: 16px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #dce8dc;
+}
+
+.barra span {
+    display: block;
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--terra), var(--verde-claro), var(--azul));
+    transition: width 280ms ease;
+}
+
+.resultado--alto {
+    outline: 4px solid rgba(139, 207, 116, 0.5);
+}
+
+.indicadores {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.indicador {
+    padding: 26px;
+    border-radius: var(--raio);
+    background: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.indicador__numero {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.indicador p {
+    margin: 0;
+}
+
+.mural-ideias {
+    margin-top: 12px;
+}
+
+.mural-ideias strong {
+    display: block;
+    color: var(--verde-escuro);
+}
+
+.rodape {
+    padding: 30px 0;
+    background: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.rodape p {
+    margin: 4px 0;
+}
+
+/* ETAPA B4 - Usabilidade - NÃ­vel 4: responsividade, modo escuro, transiÃ§Ãµes e navegaÃ§Ã£o fluida */
+/* ETAPA 4 - USABILIDADE - NÃVEL 4 */
+body.modo-escuro {
+    --branco: #101813;
+    --cinza-texto: #eef7ee;
+    --cinza-suave: #1a2a20;
+    --bege: #1d241c;
+    background: #101813;
+    color: #eef7ee;
+}
+
+body.modo-escuro .cabecalho,
+body.modo-escuro .card,
+body.modo-escuro .painel-destaque,
+body.modo-escuro .painel-participacao,
+body.modo-escuro .resultado,
+body.modo-escuro .opcao-sustentavel,
+body.modo-escuro .campo-formulario input,
+body.modo-escuro .campo-formulario textarea {
+    background: #15231a;
+    color: #eef7ee;
+}
+
+body.modo-escuro .secao--clara {
+    background: #111f16;
+}
+
+body.modo-escuro .secao h2,
+body.modo-escuro .secao h3,
+body.modo-escuro .cabecalho h1,
+body.modo-escuro .menu a,
+body.modo-escuro .campo-formulario label,
+body.modo-escuro .resultado strong,
+body.modo-escuro .mural-ideias strong {
+    color: #dff5d2;
+}
+
+body.fonte-maior {
+    font-size: 112%;
+}
+
+@media (max-width: 920px) {
+    .botao-menu {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 78px;
+        right: 16px;
+        left: 16px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px;
+        border-radius: var(--raio);
+        background: var(--branco);
+        box-shadow: var(--sombra);
+    }
+
+    .menu.ativo {
+        display: flex;
+    }
+
+    .menu a {
+        width: 100%;
+    }
+
+    .banner {
+        min-height: auto;
+    }
+
+    .banner__grade,
+    .grade-dupla,
+    .grade-simulador {
+        grid-template-columns: 1fr;
+    }
+
+    .cards--quatro,
+    .cards--tres,
+    .indicadores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .resultado {
+        position: static;
+    }
+}
+
+@media (max-width: 620px) {
+    .container {
+        width: min(100% - 24px, 1120px);
+    }
+
+    .cabecalho__conteudo {
+        min-height: 72px;
+    }
+
+    .cabecalho__marca {
+        gap: 9px;
+    }
+
+    .cabecalho__icone {
+        width: 42px;
+        height: 42px;
+    }
+
+    .cabecalho h1 {
+        font-size: 0.98rem;
+    }
+
+    .cabecalho p {
+        font-size: 0.76rem;
+    }
+
+    .menu {
+        top: 72px;
+    }
+
+    .banner,
+    .secao {
+        padding: 48px 0;
+    }
+
+    .banner h2 {
+        font-size: 2.45rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .cards--quatro,
+    .cards--tres,
+    .indicadores {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .painel-destaque,
+    .painel-participacao,
+    .resultado {
+        padding: 20px;
+    }
+
+    .resultado strong {
+        font-size: 3.2rem;
+    }
+
+    .botao {
+        width: 100%;
+    }
+}

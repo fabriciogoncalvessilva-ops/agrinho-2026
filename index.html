@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- ETAPA A1 - Complexidade - Nível 1: estrutura básica do documento HTML -->
+    <!-- ETAPA 1 - COMPLEXIDADE DOS CÓDIGOS - NÍVEL 1 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto Agrinho 2026 sobre produção agrícola sustentável, tecnologia no campo e preservação ambiental.">
+    <title>Agro Forte, Futuro Sustentável | Agrinho 2026</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- ETAPA B2 - Usabilidade - Nível 2: link de acessibilidade para navegação direta -->
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <!-- ETAPA A1 - Complexidade - Nível 1: uso de header, h1 e navegação inicial -->
+    <!-- ETAPA A2 - Complexidade - Nível 2: HTML organizado com divs, nav e links internos -->
+    <!-- ETAPA D4 - Originalidade - Nível 4: identidade textual própria do projeto -->
+    <header class="cabecalho" id="inicio">
+        <div class="container cabecalho__conteudo">
+            <div class="cabecalho__marca" aria-label="Identidade do projeto">
+                <span class="cabecalho__icone" aria-hidden="true">AF</span>
+                <div>
+                    <h1>Agro Forte, Futuro Sustentável</h1>
+                    <p>Equilíbrio entre produção e meio ambiente</p>
+                </div>
+            </div>
+
+            <!-- ETAPA B2 - Usabilidade - Nível 2: navegação básica funcional -->
+            <!-- ETAPA B4 - Usabilidade - Nível 4: menu responsivo controlado por JavaScript -->
+            <button class="botao-menu" type="button" id="botaoMenu" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu" id="menuPrincipal" aria-label="Menu principal">
+                <a href="#importancia">Importância</a>
+                <a href="#desafios">Desafios</a>
+                <a href="#solucoes">Soluções</a>
+                <a href="#simulador">Simulador</a>
+                <a href="#participacao">Participar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <!-- ETAPA B1 - Usabilidade - Nível 1: conteúdo visível, contraste e imagem carregando localmente -->
+        <!-- ETAPA D2 - Originalidade - Nível 2: estética coerente com agro, natureza e tecnologia -->
+        <!-- ETAPA 4 - ORIGINALIDADE - NÍVEL 4 -->
+        <section class="banner" aria-labelledby="titulo-banner">
+            <div class="container banner__grade">
+                <div class="banner__texto">
+                    <p class="etiqueta">Concurso Agrinho 2026</p>
+                    <h2 id="titulo-banner">Produzir bem hoje é cuidar do amanhã.</h2>
+                    <p>
+                        No campo sustentável, a tecnologia ajuda o produtor a economizar água,
+                        proteger o solo, preservar áreas verdes e manter alimentos de qualidade
+                        chegando à mesa das famílias.
+                    </p>
+                    <div class="banner__acoes">
+                        <a class="botao botao--primario" href="#simulador">Calcular impacto</a>
+                        <a class="botao botao--secundario" href="#solucoes">Ver soluções</a>
+                    </div>
+                </div>
+
+                <figure class="banner__imagem">
+                    <img src="img/campo-sustentavel.svg" alt="Ilustração autoral de uma propriedade rural com lavoura, árvores, energia solar e tecnologia.">
+                    <figcaption>Campo produtivo, tecnologia limpa e natureza em equilíbrio.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ETAPA A2 - Complexidade - Nível 2: section e divs organizando o conteúdo -->
+        <!-- ETAPA D1 - Originalidade - Nível 1: textos próprios e coerentes com o tema -->
+        <section class="secao" id="importancia" aria-labelledby="titulo-importancia">
+            <div class="container grade-dupla">
+                <div>
+                    <p class="etiqueta">Produção com responsabilidade</p>
+                    <h2 id="titulo-importancia">O agro e sua importância</h2>
+                    <p>
+                        O agro participa da alimentação, da geração de renda, do transporte,
+                        da pesquisa científica e da vida urbana. Quando o campo se desenvolve
+                        com planejamento, toda a sociedade ganha.
+                    </p>
+                    <p>
+                        O desafio atual não é escolher entre produzir ou preservar. O caminho
+                        é produzir melhor, usando conhecimento, manejo correto e tecnologias
+                        que diminuem desperdícios.
+                    </p>
+                </div>
+
+                <!-- ETAPA B2 - Usabilidade - Nível 2: melhor hierarquia visual em lista de destaques -->
+                <div class="painel-destaque">
+                    <h3>Por que o equilíbrio importa?</h3>
+                    <ul class="lista-check">
+                        <li>Fortalece a segurança alimentar.</li>
+                        <li>Valoriza o trabalho das famílias do campo.</li>
+                        <li>Reduz impactos sobre rios, matas e solo.</li>
+                        <li>Prepara a produção para mudanças climáticas.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA 2 - COMPLEXIDADE DOS CÓDIGOS - NÍVEL 2 -->
+        <!-- ETAPA B3 - Usabilidade - Nível 3: layout estável em desktop com cards informativos -->
+        <section class="secao secao--clara" id="desafios" aria-labelledby="titulo-desafios">
+            <div class="container">
+                <div class="cabecalho-secao">
+                    <p class="etiqueta">Atenção ambiental</p>
+                    <h2 id="titulo-desafios">Desafios ambientais</h2>
+                    <p>
+                        O campo sustentável reconhece os problemas e transforma cada desafio
+                        em oportunidade de melhoria.
+                    </p>
+                </div>
+
+                <div class="cards cards--quatro">
+                    <article class="card">
+                        <span class="card__icone" aria-hidden="true">01</span>
+                        <h3>Água</h3>
+                        <p>Uso sem controle pode reduzir nascentes, rios e reservas para pessoas, animais e plantas.</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__icone" aria-hidden="true">02</span>
+                        <h3>Solo</h3>
+                        <p>Erosão e compactação diminuem a fertilidade e exigem mais correções no futuro.</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__icone" aria-hidden="true">03</span>
+                        <h3>Energia</h3>
+                        <p>Dependência de fontes poluentes aumenta custos e emissões na cadeia produtiva.</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__icone" aria-hidden="true">04</span>
+                        <h3>Biodiversidade</h3>
+                        <p>Reduzir matas e corredores verdes afeta polinizadores, equilíbrio ecológico e clima local.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA D3 - Originalidade - Nível 3: elemento autoral textual com proposta visual consistente -->
+        <!-- ETAPA 3 - USABILIDADE - NÍVEL 3 -->
+        <section class="secao" id="solucoes" aria-labelledby="titulo-solucoes">
+            <div class="container">
+                <div class="cabecalho-secao">
+                    <p class="etiqueta">Práticas possíveis</p>
+                    <h2 id="titulo-solucoes">Soluções sustentáveis</h2>
+                    <p>
+                        As soluções mais eficientes combinam conhecimento local, ciência,
+                        tecnologia e cuidado diário com os recursos naturais.
+                    </p>
+                </div>
+
+                <div class="cards cards--tres">
+                    <article class="card card--solucao">
+                        <h3>Irrigação inteligente</h3>
+                        <p>Gotejamento, sensores de umidade e horários adequados economizam água sem prejudicar a lavoura.</p>
+                    </article>
+                    <article class="card card--solucao">
+                        <h3>Rotação de culturas</h3>
+                        <p>Alternar culturas ajuda a recuperar nutrientes, controlar pragas e manter o solo vivo.</p>
+                    </article>
+                    <article class="card card--solucao">
+                        <h3>Energia solar</h3>
+                        <p>Painéis solares podem abastecer bombas, galpões e sistemas de monitoramento no campo.</p>
+                    </article>
+                    <article class="card card--solucao">
+                        <h3>Mata ciliar</h3>
+                        <p>Proteger a vegetação perto de rios evita assoreamento e conserva a água da comunidade.</p>
+                    </article>
+                    <article class="card card--solucao">
+                        <h3>Agricultura de precisão</h3>
+                        <p>Mapas, drones e dados ajudam a aplicar insumos apenas onde existe necessidade.</p>
+                    </article>
+                    <article class="card card--solucao">
+                        <h3>Compostagem</h3>
+                        <p>Resíduos orgânicos viram adubo e reduzem descarte, custos e dependência de insumos externos.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA A3 - Complexidade - Nível 3: formulário, inputs, labels, IDs e variáveis usadas pelo JS -->
+        <!-- ETAPA A4 - Complexidade - Nível 4: interação encadeada com cálculo, DOM e feedback visual -->
+        <section class="secao secao--interativa" id="simulador" aria-labelledby="titulo-simulador">
+            <div class="container grade-simulador">
+                <div>
+                    <p class="etiqueta">Interatividade com JavaScript</p>
+                    <h2 id="titulo-simulador">Calculadora de Impacto Sustentável no Campo</h2>
+                    <p>
+                        Marque as ações que uma propriedade rural pode adotar. O simulador soma
+                        pontos em tempo real e mostra um diagnóstico educativo sobre sustentabilidade.
+                    </p>
+
+                    <!-- ETAPA B3 - Usabilidade - Nível 3: controles com resposta visual ao usuário -->
+                    <form class="formulario-simulador" id="formImpacto">
+                        <fieldset>
+                            <legend>Ações sustentáveis adotadas</legend>
+
+                            <label class="opcao-sustentavel">
+                                <input type="checkbox" name="acao" value="25" data-nome="Economia de água">
+                                <span>Economia de água com irrigação eficiente</span>
+                            </label>
+
+                            <label class="opcao-sustentavel">
+                                <input type="checkbox" name="acao" value="20" data-nome="Rotação de culturas">
+                                <span>Rotação de culturas e cobertura do solo</span>
+                            </label>
+
+                            <label class="opcao-sustentavel">
+                                <input type="checkbox" name="acao" value="20" data-nome="Energia solar">
+                                <span>Uso de energia solar em bombas e galpões</span>
+                            </label>
+
+                            <label class="opcao-sustentavel">
+                                <input type="checkbox" name="acao" value="20" data-nome="Preservação do solo">
+                                <span>Plantio direto e curvas de nível contra erosão</span>
+                            </label>
+
+                            <label class="opcao-sustentavel">
+                                <input type="checkbox" name="acao" value="15" data-nome="Proteção de nascentes">
+                                <span>Proteção de nascentes, matas ciliares e polinizadores</span>
+                            </label>
+                        </fieldset>
+
+                        <div class="campo-formulario">
+                            <label for="nomePropriedade">Nome da propriedade ou equipe</label>
+                            <input type="text" id="nomePropriedade" name="nomePropriedade" maxlength="40" placeholder="Ex.: Sítio Boa Colheita">
+                        </div>
+
+                        <div class="acoes-formulario">
+                            <button class="botao botao--primario" type="button" id="botaoCalcular">Atualizar resultado</button>
+                            <button class="botao botao--neutro" type="reset" id="botaoLimpar">Limpar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="resultado" aria-live="polite" aria-label="Resultado da calculadora sustentável">
+                    <span class="resultado__rotulo">Pontuação sustentável</span>
+                    <strong id="pontuacao">0</strong>
+                    <div class="barra" aria-hidden="true">
+                        <span id="barraProgresso"></span>
+                    </div>
+                    <p id="mensagemResultado">Selecione ações para descobrir o impacto positivo da propriedade.</p>
+                    <ul id="listaAcoes" class="lista-acoes"></ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ETAPA A4 - Complexidade - Nível 4: indicadores atualizados pelo JavaScript -->
+        <section class="secao secao--clara" id="indicadores" aria-labelledby="titulo-indicadores">
+            <div class="container">
+                <div class="cabecalho-secao">
+                    <p class="etiqueta">Dados simulados</p>
+                    <h2 id="titulo-indicadores">Indicadores ambientais da fazenda-modelo</h2>
+                    <p>
+                        Os números abaixo são simulados para fins educativos. Eles mostram como
+                        pequenas escolhas podem formar uma produção mais equilibrada.
+                    </p>
+                </div>
+
+                <div class="indicadores">
+                    <article class="indicador">
+                        <span class="indicador__numero" data-contador="38">0</span>
+                        <p>% de economia de água em irrigação planejada</p>
+                    </article>
+                    <article class="indicador">
+                        <span class="indicador__numero" data-contador="52">0</span>
+                        <p>% de energia limpa usada nas atividades</p>
+                    </article>
+                    <article class="indicador">
+                        <span class="indicador__numero" data-contador="74">0</span>
+                        <p>% do solo protegido por cobertura vegetal</p>
+                    </article>
+                    <article class="indicador">
+                        <span class="indicador__numero" data-contador="18">0</span>
+                        <p>hectares de áreas verdes preservadas</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA A3 - Complexidade - Nível 3: área de participação com input e processamento no DOM -->
+        <!-- ETAPA B4 - Usabilidade - Nível 4: modo escuro e aumento de fonte via JavaScript -->
+        <section class="secao" id="participacao" aria-labelledby="titulo-participacao">
+            <div class="container grade-dupla">
+                <div>
+                    <p class="etiqueta">Participação do usuário</p>
+                    <h2 id="titulo-participacao">Escreva uma ideia para o campo sustentável</h2>
+                    <p>
+                        A sustentabilidade melhora quando cada pessoa observa sua realidade
+                        e propõe atitudes possíveis para a escola, a família e a comunidade.
+                    </p>
+
+                    <form class="formulario-ideia" id="formIdeia">
+                        <div class="campo-formulario">
+                            <label for="nomeVisitante">Seu nome</label>
+                            <input type="text" id="nomeVisitante" name="nomeVisitante" maxlength="35" placeholder="Digite seu nome">
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="ideiaVisitante">Sua ideia sustentável</label>
+                            <textarea id="ideiaVisitante" name="ideiaVisitante" rows="5" maxlength="180" placeholder="Ex.: Criar uma horta escolar com compostagem."></textarea>
+                        </div>
+
+                        <button class="botao botao--primario" type="submit">Enviar ideia</button>
+                    </form>
+                </div>
+
+                <div class="painel-participacao">
+                    <h3>Mural de ideias</h3>
+                    <p id="mensagemIdeia">As ideias enviadas aparecerão aqui durante a navegação.</p>
+                    <ul id="muralIdeias" class="mural-ideias"></ul>
+
+                    <div class="preferencias">
+                        <button class="botao botao--secundario" type="button" id="botaoTema">Alternar modo escuro</button>
+                        <button class="botao botao--secundario" type="button" id="botaoFonte">Aumentar fonte</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ETAPA C1 - Publicação - Nível 1: estrutura com footer e créditos para repositório público -->
+    <!-- ETAPA C4 - Publicação - Nível 4: caminhos locais prontos para GitHub Pages ou Vercel -->
+    <footer class="rodape">
+        <div class="container rodape__conteudo">
+            <p><strong>Agrinho 2026</strong> - Subcategoria 3: Programação Front-End.</p>
+            <p>Tema: Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente.</p>
+            <p>Projeto autoral desenvolvido com HTML, CSS e JavaScript puro.</p>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
